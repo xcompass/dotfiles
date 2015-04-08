@@ -80,7 +80,7 @@
 [core]
 
 	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.gitignore
+	excludesfile = /opt/boxen/config/git/gitignore
 	attributesfile = ~/.gitattributes
 
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error
@@ -164,3 +164,12 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+[hub]
+protocol = https
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential
+[user]
+	name = Pan Luo
+	email = pan.luo@ubc.ca

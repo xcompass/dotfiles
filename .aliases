@@ -139,3 +139,11 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+
+alias nf="/Applications/Firefox.app/Contents/MacOS/firefox-bin -P ForTest"
+#alias nr="tr '\015' '\n\r' < "
+alias bblog="ssh -t  bbdev tail -f /usr/local/blackboard/apps/tomcat/logs/stdout-stderr-`date \"+%Y%m%d\"`.log"
+alias itun="ssh -f taco -L 2022:placement.asia.ubc.ca:22 -N"
+alias ssh='TERM=xterm ssh'
+alias raccoon="ssh raccoon.ctlt.ubc.ca -t tmux a"
