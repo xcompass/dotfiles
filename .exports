@@ -35,7 +35,8 @@ if [ -d "${RBENV_ROOT}" ]; then
     eval "$(rbenv init -)"
 fi
 
-export DOCKER_HOST=tcp://docker.ctlt.ubc.ca:4243
+#export DOCKER_HOST=tcp://docker.ctlt.ubc.ca:4243
+export DOCKER_HOST=tcp://10.93.2.186:4243
 source /opt/boxen/env.sh
 export GITHUB_API_TOKEN=0c688966d08454d03eb61287ea069c6f8e3fc3a1
 source /opt/boxen/homebrew/opt/autoenv/activate.sh
