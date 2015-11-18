@@ -41,12 +41,14 @@ if [ -d "${RBENV_ROOT}" ]; then
 fi
 
 #export DOCKER_HOST=tcp://docker.ctlt.ubc.ca:4243
-export DOCKER_HOST=tcp://10.93.2.186:4243
+#export DOCKER_HOST=tcp://10.93.2.186:4243
 source /opt/boxen/env.sh
-export GITHUB_API_TOKEN=0c688966d08454d03eb61287ea069c6f8e3fc3a1
+export GITHUB_API_TOKEN=3c58e22536d2e2a0d80266aca9af8049b5aaf36d
 source /opt/boxen/homebrew/opt/autoenv/activate.sh
 
-export WORKON_HOME=$HOME/virutalenv
+export WORKON_HOME=$HOME/venvs
 export PROJECT_HOME=$HOME/projects
-#export VIRTUALENVWRAPPER_SCRIPT=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
-#source /opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper_lazy.sh
+source /opt/python/2.7/bin/virtualenvwrapper.sh
+
+export DYLD_LIBRARY_PATH=/opt/oracle/instantclient_11_2:$DYLD_LIBRARY_PATH
+export PATH=/opt/oracle/instantclient_11_2:$PATH

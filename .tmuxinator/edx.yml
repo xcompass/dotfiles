@@ -1,0 +1,37 @@
+# ~/.tmuxinator/edx.yml
+
+name: edx
+root: ~/projects/devstack
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+pre: vagrant up
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+pre_window: source xblock/ubcpi/.venv/bin/activate
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+windows:
+  - editor:
+      - vim
+  - server:
+      layout: even-horizontal
+      panes:
+        - lms:
+          - vagrant ssh
+          - sudo su edxapp
+          - paver devstack --fast lms
+        - studio:
+          - vagrant ssh
+          - sudo su edxapp
+          - paver devstack --fast studio
