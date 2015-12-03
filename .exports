@@ -48,9 +48,9 @@ fi
 #export DOCKER_HOST=tcp://docker.ctlt.ubc.ca:4243
 #export DOCKER_HOST=tcp://10.93.2.186:4243
 source /opt/boxen/env.sh
-export GITHUB_API_TOKEN=3c58e22536d2e2a0d80266aca9af8049b5aaf36d
 source /opt/boxen/homebrew/opt/autoenv/activate.sh
 
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 export WORKON_HOME=$HOME/venvs
 export PROJECT_HOME=$HOME/projects
 source /opt/python/2.7/bin/virtualenvwrapper.sh
