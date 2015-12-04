@@ -85,3 +85,4 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 [ -f /opt/boxen/homebrew/opt/autoenv/activate.sh ] && source /opt/boxen/homebrew/opt/autoenv/activate.sh
+eval "$(pyenv virtualenv-init -)"
