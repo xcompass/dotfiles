@@ -49,11 +49,11 @@ ZSH_THEME="avit"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux vi-mode symfony2 django pip osx themes)
+plugins=(git tmux vi-mode symfony2 django pip osx themes tmuxinator)
 
 # User configuration
-
-export PATH="/opt/oracle/instantclient_11_2:bin:/opt/boxen/rbenv/shims:/opt/boxen/rbenv/bin:/opt/boxen/ruby-build/bin:/opt/boxen/pyenv/shims:/opt/boxen/pyenv/bin:/opt/boxen/phantomenv/shims:/opt/boxen/phantomenv/bin:/opt/boxen/nodenv/shims:/opt/boxen/nodenv/bin:/opt/boxen/node-build/bin:/opt/boxen/homebrew/bin:/opt/boxen/homebrew/sbin:/opt/boxen/bin:/opt/boxen/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin"
+source ~/.exports
+source ~/.aliases
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -86,3 +86,5 @@ source $ZSH/oh-my-zsh.sh
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 [ -f /opt/boxen/homebrew/opt/autoenv/activate.sh ] && source /opt/boxen/homebrew/opt/autoenv/activate.sh
 eval "$(pyenv virtualenv-init -)"
+
+bindkey '^r' history-incremental-search-backward

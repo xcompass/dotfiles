@@ -1,0 +1,60 @@
+UnBundle 'myusuf3/numbers.vim'
+UnBundle 'spf13/vim-autoclose'
+set nonumber
+set nocursorline
+colorscheme solarized
+
+let g:syntastic_phpcs_conf = "--standard=CTLT"
+let g:neocomplcache_enable_at_startup = 0
+let g:neocomplcache_disable_auto_complete = 1
+let g:indent_guides_enable_on_vim_startup = 0
+" disable the PIV auto folding {{{ }}}
+"let g:DisableAutoPHPFolding = 1
+
+let g:pdv_cfg_Package = "ca.ubc.ctlt"
+let g:pdv_cfg_Version = "//autogen//"
+let g:pdv_cfg_Author = "Compass <pan.luo@ubc.ca>"
+let g:pdv_cfg_Copyright = "Copyright (c) 2013 All rights reserved."
+let g:pdv_cfg_License = "PHP Version 3.0 {@link http://www.php.net/license/3_0.txt}"
+let g:pdv_cfg_CommentEnd = ""
+
+"map <F5> <Esc>:EnableFastPHPFolds<Cr> 
+map <F6> <Esc>:EnablePHPFolds<Cr> 
+map <F7> <Esc>:DisablePHPFolds<Cr> 
+map ,sc <Esc>:execute ":!"g:symfony_enable_shell_cmd<CR>
+"set pastetoggle=<C-[>
+
+
+set complete-=i
+
+function! Formatphp()
+    %s/\<\(if\|foreach\|for\|while\)\> *( *\(.*\)) *[\n]* *{/\1 (\2) {/g
+    %s/\<\(function\|class\)\>\([^{}]*\){/\1\2\r{/g
+    %s/} *[\n]* *else *[\n]* *{/} else {/g
+    %s/\<var\> /public /g
+    %s/,\('\|"\|\$\|array\)/, \1/g
+    normal gg=G
+endfunction
+
+cmap w!! w !sudo tee >/dev/null %
+
+"neocomplcache Popup on <Tab>
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : "\<C-x>\<C-u>"
+function! s:check_back_space()"{{{
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1] =~ '\s'
+endfunction"}}
+
+"Auto complete to common string and show available variants (if any)
+inoremap <expr><C-l> neocomplcache#complete_common_string()
+
+"Highlighting first candidate
+"let g:neocomplcache_enable_auto_select = 1
+"inoremap <expr><C-h> neocomplcache#smart_close_popup().“\<C-h>”
+"inoremap <expr><BS> neocomplcache#smart_close_popup().“\<C-h>”
+
+"Choose candidate with <CR>
+"inoremap <expr><CR> neocomplcache#smart_close_popup() . “\<CR>”
+
+
+nnoremap ,t :!phpunit -c app %<CR>
