@@ -57,3 +57,11 @@ source /opt/python/2.7/bin/virtualenvwrapper.sh
 
 export DYLD_LIBRARY_PATH=/opt/oracle/instantclient_11_2:$DYLD_LIBRARY_PATH
 export PATH=/opt/oracle/instantclient_11_2:$PATH
+
+export GOPATH=$HOME/temp/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
+
+if [ -f ".export_local" ]; then
+    source .export_local
+fi

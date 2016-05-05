@@ -155,3 +155,6 @@ alias bblog="ssh -t  bbdev tail -f /usr/local/blackboard/apps/tomcat/logs/stdout
 alias itun="ssh -f taco -L 2022:placement.asia.ubc.ca:22 -N"
 alias ssh='TERM=xterm ssh'
 alias raccoon="ssh raccoon.ctlt.ubc.ca -t tmux a"
+
+# kubernetes
+alias ks='kubectl --namespace=kube-system'

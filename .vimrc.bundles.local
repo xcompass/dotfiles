@@ -7,3 +7,4 @@ let g:spf13_use_powerline = 1
 Bundle 'docteurklein/vim-symfony'
 Bundle 'joonty/vdebug.git'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'docker/docker'
