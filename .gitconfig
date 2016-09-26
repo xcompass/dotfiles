@@ -192,6 +192,7 @@ helper = /opt/boxen/bin/boxen-git-credential
 [user]
 	name = Pan Luo
 	email = pan.luo@ubc.ca
+	signingkey = AC25FB6A
 [http]
 	sslVerify = false
 [mergetool]

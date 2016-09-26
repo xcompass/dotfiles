@@ -88,3 +88,12 @@ source $ZSH/oh-my-zsh.sh
 eval "$(pyenv virtualenv-init -)"
 
 bindkey '^r' history-incremental-search-backward
+
+# added by travis gem
+[ -f /Users/compass/.travis/travis.sh ] && source /Users/compass/.travis/travis.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/compass/tools/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/compass/tools/google-cloud-sdk/completion.zsh.inc'
