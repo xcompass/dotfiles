@@ -97,3 +97,4 @@ source '/Users/compass/tools/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables shell command completion for gcloud.
 source '/Users/compass/tools/google-cloud-sdk/completion.zsh.inc'
+export PATH="/opt/boxen/homebrew/opt/curl/bin:$PATH"

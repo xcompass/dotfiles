@@ -53,7 +53,8 @@ source /opt/boxen/env.sh
 source /opt/boxen/homebrew/opt/autoenv/activate.sh
 
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
-export WORKON_HOME=$HOME/venvs
+export WORKON_HOME=/opt/python
+export VIRTUALENVWRAPPER_HOOK_DIR=/opt/python
 export PROJECT_HOME=$HOME/projects
 source /opt/python/2.7/bin/virtualenvwrapper.sh
 
