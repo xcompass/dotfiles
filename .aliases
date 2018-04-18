@@ -163,3 +163,5 @@ alias ks='kubectl --namespace=kube-system'
 alias dockerclean='docker rm $(docker ps -a -q); docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 
 #alias k='kubectl "--context=${KUBECTL_CONTEXT:-$(kubectl config current-context)}" ${KUBECTL_NAMESPACE/[[:alnum:]-]*/--namespace=${KUBECTL_NAMESPACE}}'
+
+alias dnsflush='sudo killall -HUP mDNSResponder'

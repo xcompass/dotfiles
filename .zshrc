@@ -98,3 +98,20 @@ source '/Users/compass/tools/google-cloud-sdk/path.zsh.inc'
 # The next line enables shell command completion for gcloud.
 source '/Users/compass/tools/google-cloud-sdk/completion.zsh.inc'
 export PATH="/opt/boxen/homebrew/opt/curl/bin:$PATH"
+
+source <(kubectl completion zsh)
+
+PATH="/Users/compass/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/compass/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/compass/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/compass/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/compass/perl5"; export PERL_MM_OPT;
+
+function f_notifyme {
+  LAST_EXIT_CODE=$?
+  CMD=$(fc -ln -1)
+  # No point in waiting for the command to complete
+  /Users/compass/scripts_pan/notifyme "$CMD" "$LAST_EXIT_CODE" &
+}
+
+export PS1='$(f_notifyme)'$PS1
