@@ -1,3 +1,4 @@
+zmodload zsh/zprof
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/compass/.oh-my-zsh
 
@@ -49,11 +50,12 @@ ZSH_THEME="avit"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux vi-mode symfony2 django pip osx themes tmuxinator)
+plugins=(git tmux vi-mode pip osx themes tmuxinator docker docker-compose)
 
 # User configuration
 source ~/.exports
 source ~/.aliases
+source ~/.functions
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -83,9 +85,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
-[ -f /opt/boxen/homebrew/opt/autoenv/activate.sh ] && source /opt/boxen/homebrew/opt/autoenv/activate.sh
-eval "$(pyenv virtualenv-init -)"
+#[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+#[ -f /opt/boxen/homebrew/opt/autoenv/activate.sh ] && source /opt/boxen/homebrew/opt/autoenv/activate.sh
+#eval "$(pyenv virtualenv-init -)"
 
 bindkey '^r' history-incremental-search-backward
 
@@ -98,8 +100,6 @@ source '/Users/compass/tools/google-cloud-sdk/path.zsh.inc'
 # The next line enables shell command completion for gcloud.
 source '/Users/compass/tools/google-cloud-sdk/completion.zsh.inc'
 export PATH="/opt/boxen/homebrew/opt/curl/bin:$PATH"
-
-source <(kubectl completion zsh)
 
 PATH="/Users/compass/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/Users/compass/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -115,3 +115,5 @@ function f_notifyme {
 }
 
 export PS1='$(f_notifyme)'$PS1
+
+zprof

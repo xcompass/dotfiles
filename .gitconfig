@@ -204,3 +204,5 @@ helper = /opt/boxen/bin/boxen-git-credential
 	sslVerify = false
 [mergetool]
 	prompt = false
+[gpg]
+	program = gpg

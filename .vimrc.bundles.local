@@ -1,4 +1,3 @@
-"let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'php', 'javascript', 'html', 'misc']
 let g:spf13_no_autochdir = 1
 " disable auto change dir
 let g:spf13_no_views = 1
@@ -8,3 +7,5 @@ Bundle 'docteurklein/vim-symfony'
 Bundle 'joonty/vdebug.git'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'docker/docker'
+Bundle 'will133/vim-dirdiff'
+Bundle 'google/vim-jsonnet'

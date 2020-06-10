@@ -197,3 +197,34 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+function webworkmon() {
+
+    split_list=()
+    for i in `seq 2 14`; do
+        split_list+=( split-pane ssh "web$i.webwork.prod.ctlt.ubc.ca" ';'  )
+    done
+
+    tmux new-session ssh "web1.webwork.prod.ctlt.ubc.ca" ';' \
+        "${split_list[@]}" \
+        select-layout tiled ';' \
+        set-option -w synchronize-panes
+}
+
+function webworkm() {
+   tmux new-window ssh web1.webwork.prod.ctlt.ubc.ca
+   for i in `seq 2 14`; do
+     tmux split-pane ssh web$i.webwork.prod.ctlt.ubc.ca
+     tmux select-layout tiled
+   done
+
+   tmux set-option -w synchronize-panes
+}
+
+function kubectl() {
+    if ! type __start_kubectl >/dev/null 2>&1; then
+        source <(command kubectl completion zsh)
+    fi
+
+    command kubectl "$@"
+}
