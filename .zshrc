@@ -1,4 +1,4 @@
-zmodload zsh/zprof
+#zmodload zsh/zprof
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/compass/.oh-my-zsh
 
@@ -88,6 +88,9 @@ source $ZSH/oh-my-zsh.sh
 #[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 #[ -f /opt/boxen/homebrew/opt/autoenv/activate.sh ] && source /opt/boxen/homebrew/opt/autoenv/activate.sh
 #eval "$(pyenv virtualenv-init -)"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 
 bindkey '^r' history-incremental-search-backward
 
@@ -116,4 +119,7 @@ function f_notifyme {
 
 export PS1='$(f_notifyme)'$PS1
 
-zprof
+#zprof
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+

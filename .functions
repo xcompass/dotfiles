@@ -173,7 +173,7 @@ function tre() {
 function webworkmon() {
 
     split_list=()
-    for i in `seq 2 14`; do
+    for i in `seq 2 18`; do
         split_list+=( split-pane ssh "web$i.webwork.prod.ctlt.ubc.ca" ';'  )
     done
 
@@ -185,7 +185,7 @@ function webworkmon() {
 
 function webworkm() {
    tmux new-window ssh web1.webwork.prod.ctlt.ubc.ca
-   for i in `seq 2 14`; do
+   for i in `seq 2 18`; do
      tmux split-pane ssh web$i.webwork.prod.ctlt.ubc.ca
      tmux select-layout tiled
    done

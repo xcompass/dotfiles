@@ -171,3 +171,5 @@ alias watchbuffers="kubectl get nodes --no-headers | awk '{print \$1}' | xpanes 
 source ~/.kubectl_aliases
 
 alias phpstan='docker run -v $PWD:/app --rm phpstan/phpstan'
+
+alias sha256sum='shasum --algorithm 256'

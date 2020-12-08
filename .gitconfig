@@ -209,3 +209,5 @@ helper = /opt/boxen/bin/boxen-git-credential
 	prompt = false
 [gpg]
 	program = gpg
+[pull]
+	ff = only
