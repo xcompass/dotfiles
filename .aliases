@@ -173,3 +173,7 @@ source ~/.kubectl_aliases
 alias phpstan='docker run -v $PWD:/app --rm phpstan/phpstan'
 
 alias sha256sum='shasum --algorithm 256'
+
+alias copy_nht='cp ~/scripts_pan/NationalHoseThreads.xml "/Users/compass/Library/Application Support/Autodesk/webdeploy/production/Autodesk Fusion 360.app/Contents/Libraries/Applications/Fusion/Fusion/Server/Fusion/Configuration/ThreadData"'
+
+#alias tf='terraform'

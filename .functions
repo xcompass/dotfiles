@@ -173,20 +173,20 @@ function tre() {
 function webworkmon() {
 
     split_list=()
-    for i in `seq 2 18`; do
-        split_list+=( split-pane ssh "web$i.webwork.prod.ctlt.ubc.ca" ';'  )
+    for i in `seq 2 14`; do
+        split_list+=( split-pane ssh "core@web$i.webwork.prod.ctlt.ubc.ca" ';'  )
     done
 
-    tmux new-session ssh "web1.webwork.prod.ctlt.ubc.ca" ';' \
+    tmux new-session ssh "core@web1.webwork.prod.ctlt.ubc.ca" ';' \
         "${split_list[@]}" \
         select-layout tiled ';' \
         set-option -w synchronize-panes
 }
 
 function webworkm() {
-   tmux new-window ssh web1.webwork.prod.ctlt.ubc.ca
-   for i in `seq 2 18`; do
-     tmux split-pane ssh web$i.webwork.prod.ctlt.ubc.ca
+   tmux new-window ssh core@web1.webwork.prod.ctlt.ubc.ca
+   for i in `seq 2 14`; do
+     tmux split-pane ssh core@web$i.webwork.prod.ctlt.ubc.ca
      tmux select-layout tiled
    done
 

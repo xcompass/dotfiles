@@ -57,7 +57,9 @@ inoremap <expr><C-l> neocomplcache#complete_common_string()
 "inoremap <expr><CR> neocomplcache#smart_close_popup() . “\<CR>”
 
 
-nnoremap ,t :!phpunit -c app %<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
 
 " vimdiff shortcuts
 map <silent> <leader>2 :diffget 2<CR> :diffupdate<CR>

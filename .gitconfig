@@ -198,16 +198,16 @@
 protocol = https
 
 [credential]
-helper = /opt/boxen/bin/boxen-git-credential
+#helper = /opt/boxen/bin/boxen-git-credential
 [user]
 	name = Pan Luo
 	email = pan.luo@ubc.ca
-	signingkey = AC25FB6A
+	signingkey = AD11D35AAC25FB6A
 [http]
 	sslVerify = false
 [mergetool]
 	prompt = false
 [gpg]
-	program = gpg
+	program = gpg2
 [pull]
 	ff = only

@@ -50,7 +50,7 @@ ZSH_THEME="avit"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux vi-mode pip osx themes tmuxinator docker docker-compose)
+plugins=(git tmux vi-mode pip macos themes tmuxinator docker docker-compose asdf systemadmin)
 
 # User configuration
 source ~/.exports
@@ -102,7 +102,7 @@ source '/Users/compass/tools/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables shell command completion for gcloud.
 source '/Users/compass/tools/google-cloud-sdk/completion.zsh.inc'
-export PATH="/opt/boxen/homebrew/opt/curl/bin:$PATH"
+export PATH="/opt/boxen/homebrew/opt/curl/bin:/opt/boxen/homebrew/bin:$PATH"
 
 PATH="/Users/compass/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/Users/compass/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
