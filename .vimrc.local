@@ -18,9 +18,9 @@ let g:pdv_cfg_Copyright = "Copyright (c) 2013 All rights reserved."
 let g:pdv_cfg_License = "PHP Version 3.0 {@link http://www.php.net/license/3_0.txt}"
 let g:pdv_cfg_CommentEnd = ""
 
-"map <F5> <Esc>:EnableFastPHPFolds<Cr> 
-map <F6> <Esc>:EnablePHPFolds<Cr> 
-map <F7> <Esc>:DisablePHPFolds<Cr> 
+"map <F5> <Esc>:EnableFastPHPFolds<Cr>
+map <F6> <Esc>:EnablePHPFolds<Cr>
+map <F7> <Esc>:DisablePHPFolds<Cr>
 map ,sc <Esc>:execute ":!"g:symfony_enable_shell_cmd<CR>
 "set pastetoggle=<C-[>
 
@@ -77,3 +77,5 @@ set expandtab
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+
+set rtp+=/opt/homebrew/opt/fzf

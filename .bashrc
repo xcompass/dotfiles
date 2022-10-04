@@ -2,3 +2,6 @@
 
 # added by travis gem
 #[ -f /Users/compass/.travis/travis.sh ] && source /Users/compass/.travis/travis.sh
+
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

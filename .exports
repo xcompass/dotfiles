@@ -55,7 +55,7 @@ export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 export WORKON_HOME=/opt/python
 export VIRTUALENVWRAPPER_HOOK_DIR=/opt/python
 export PROJECT_HOME=$HOME/projects
-source /opt/python/2.7/bin/virtualenvwrapper_lazy.sh
+#source /opt/python/2.7/bin/virtualenvwrapper_lazy.sh
 
 export DYLD_LIBRARY_PATH=/opt/oracle/instantclient_11_2:$DYLD_LIBRARY_PATH
 export PATH=/opt/oracle/instantclient_11_2:$PATH

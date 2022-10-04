@@ -1,3 +1,4 @@
+# Install powerline fonts https://jessicadeen.com/macos-ohmyzsh-tmux-vim-iterm2-powerlevel9k-badass-terminal/
 #zmodload zsh/zprof
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/compass/.oh-my-zsh
@@ -6,8 +7,9 @@ export ZSH=/Users/compass/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="avit"
-
+#ZSH_THEME="avit"
+#POWERLEVEL9K_MODE='awesome-patched'
+ZSH_THEME="powerlevel9k/powerlevel9k"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -50,7 +52,7 @@ ZSH_THEME="avit"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux vi-mode pip macos themes tmuxinator docker docker-compose asdf systemadmin)
+plugins=(sudo history git tmux vi-mode pip macos themes tmuxinator docker docker-compose asdf systemadmin)
 
 # User configuration
 source ~/.exports
@@ -98,11 +100,10 @@ bindkey '^r' history-incremental-search-backward
 [ -f /Users/compass/.travis/travis.sh ] && source /Users/compass/.travis/travis.sh
 
 # The next line updates PATH for the Google Cloud SDK.
-source '/Users/compass/tools/google-cloud-sdk/path.zsh.inc'
+#source '/Users/compass/tools/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables shell command completion for gcloud.
-source '/Users/compass/tools/google-cloud-sdk/completion.zsh.inc'
-export PATH="/opt/boxen/homebrew/opt/curl/bin:/opt/boxen/homebrew/bin:$PATH"
+#source '/Users/compass/tools/google-cloud-sdk/completion.zsh.inc'
 
 PATH="/Users/compass/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/Users/compass/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -123,3 +124,8 @@ export PS1='$(f_notifyme)'$PS1
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
+
+
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
