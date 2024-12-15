@@ -177,3 +177,6 @@ alias sha256sum='shasum --algorithm 256'
 alias copy_nht='cp ~/scripts_pan/NationalHoseThreads.xml "/Users/compass/Library/Application Support/Autodesk/webdeploy/production/Autodesk Fusion 360.app/Contents/Libraries/Applications/Fusion/Fusion/Server/Fusion/Configuration/ThreadData"'
 
 #alias tf='terraform'
+
+alias dfimage="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm alpine/dfimage"
+alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"

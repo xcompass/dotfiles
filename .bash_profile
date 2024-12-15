@@ -50,3 +50,5 @@ complete -W "NSGlobalDomain" defaults;
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
 source /Users/compass/.iterm2_shell_integration.bash
+
+source /Users/compass/.docker/init-bash.sh || true # Added by Docker Desktop

@@ -87,8 +87,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
-#[ -f /opt/boxen/homebrew/opt/autoenv/activate.sh ] && source /opt/boxen/homebrew/opt/autoenv/activate.sh
 #eval "$(pyenv virtualenv-init -)"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
@@ -105,7 +103,7 @@ bindkey '^r' history-incremental-search-backward
 # The next line enables shell command completion for gcloud.
 #source '/Users/compass/tools/google-cloud-sdk/completion.zsh.inc'
 
-PATH="/Users/compass/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:/Users/compass/perl5/bin:/Users/compass/Library/Android/sdk/platform-tools${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/Users/compass/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/Users/compass/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/Users/compass/perl5\""; export PERL_MB_OPT;
@@ -129,3 +127,11 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source /Users/compass/.docker/init-zsh.sh || true # Added by Docker Desktop
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+# https://gist.github.com/troyfontaine/18c9146295168ee9ca2b30c00bd1b41e?permalink_comment_id=3660126
+export GPG_TTY=$(tty)

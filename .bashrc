@@ -5,3 +5,5 @@
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+source /Users/compass/.docker/init-bash.sh || true # Added by Docker Desktop

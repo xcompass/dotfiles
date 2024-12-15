@@ -203,7 +203,7 @@
 protocol = https
 
 [credential]
-#helper = /opt/boxen/bin/boxen-git-credential
+
 [user]
 	name = Pan Luo
 	email = pan.luo@ubc.ca
@@ -213,6 +213,6 @@ protocol = https
 [mergetool]
 	prompt = false
 [gpg]
-	program = gpg2
+	program = /opt/homebrew/bin/gpg
 [pull]
 	ff = only

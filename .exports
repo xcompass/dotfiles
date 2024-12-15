@@ -35,8 +35,6 @@ export GREP_OPTIONS='--color=auto';
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
-export PATH=/opt/boxen/homebrew/bin:/Users/compass/tools/pear/bin:/Users/compass/.composer/vendor/bin:$PATH
-
 export EC2_HOME=/Users/compass/tools/ec2-api-tools
 export JAVA_HOME=$(/usr/libexec/java_home)
 
@@ -49,7 +47,6 @@ fi
 
 #export DOCKER_HOST=tcp://docker.ctlt.ubc.ca:4243
 #export DOCKER_HOST=tcp://10.93.2.186:4243
-#source /opt/boxen/homebrew/opt/autoenv/activate.sh
 
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 export WORKON_HOME=/opt/python
@@ -74,5 +71,3 @@ export GPG_TTY=$(tty);
 
 # Hide the “default interactive shell is now zsh” warning on macOS.
 export BASH_SILENCE_DEPRECATION_WARNING=1;
-
-export PYENV_ROOT=/opt/boxen/pyenv
